@@ -1,0 +1,40 @@
+.contenedor-pad {
+  width: 90%;
+  margin: 50px auto;
+}
+
+.titulo {
+  margin: 0;
+  padding: 15px;
+  background: rgb(65, 216, 78);
+  color: #fff;
+  font-size: 2em;
+  text-align: center;
+}
+
+.cont-form {
+  background-color: #fff;
+  box-shadow: 0 0 20px #333;
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+label {
+  font-size: 1.5em;
+  width: 20%;
+  text-align: end;
+  padding-right: 5px;
+}
+
+input {
+  width: 25%;
+  margin: 0 10px 10px 0;
+  font-size: 1em;
+  padding: 5px;
+}
+
+input[type="submit"] {
+  margin: auto;
+  font-weight: bold;
+}

@@ -1,0 +1,12 @@
+INSERT INTO `producto`(`id_producto`, `precio`, `nombre`, `stock`) VALUES (2035,60000,'paquete super especial shampoo en barra',250)
+
+INSERT INTO `producto`(`id_producto`, `precio`, `nombre`, `stock`) VALUES (2040,17500,'shampoo en barra cabello decolorado',70)
+
+INSERT INTO `producto`(`id_producto`, `precio`, `nombre`, `stock`) VALUES (2045,19000,'shampoo en barra reparacion capilar',110)
+
+INSERT INTO `producto`(`id_producto`, `precio`, `nombre`, `stock`) VALUES (2050,20000,'shampoo en barra nutricion profunda',250)
+
+
+CREACIÓN TABLA PRODUCTOS.
+
+CREATE TABLE producto( id_producto int PRIMARY KEY, nombre varchar (60), precio int, stock int);

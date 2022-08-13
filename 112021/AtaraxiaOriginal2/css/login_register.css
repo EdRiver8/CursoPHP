@@ -1,0 +1,272 @@
+:root{
+    --facebook: #3b5999;
+    --instagram: #e4405f;
+    --twitter: #55acee;
+    --gmail: #bd081c;
+    --mobile: #0077B5;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+body{
+    background-image: url(../AtaraxiaOriginal2/img/trailer-g25ef7e140_1920.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.nav{
+    /*position: fixed;*/
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    transition: all 0.5s ease;
+    z-index: 4;
+}
+
+.nav.active{
+    background: #000;
+    padding: 2px;
+    z-index: 2;
+}
+
+.nav.active .logo,
+.nav.active a{
+    color: #000;
+}
+
+.nav.active a:hover{
+    background: #fff;
+    color: #000;
+}
+
+.logo{
+    font-size: 25px;
+    color: #000;
+    font-weight: 100;
+    margin: 0px 600px 0px 0px;
+}
+
+.imglogo{
+    width: 50px;
+}
+
+.menu{
+    display: flex;
+}
+
+.menu li{
+    list-style: none;
+    margin: 23px;
+}
+
+.menu li a{
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.5s ease;
+}
+
+.menu li a:hover{
+    padding: 5px 10px;
+    background: #000;
+    color: #fff;
+    border-radius: 15px;
+}
+
+main{
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.contenedorTodo{
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+}
+
+.cajaTrasera{
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(10px);/*05*/
+    background-color: rgba(134, 232, 130, 0.5);
+}
+
+.cajaTrasera div{
+    margin: 100px 40px;
+    color: white;
+    transition: all 500ms;
+}
+
+.cajaTrasera div p,
+.cajaTrasera div button{
+    margin-top: 30px;
+}
+
+.cajaTrasera div h3{
+    font-weight: 400;
+    font-size: 26px;
+}
+
+.cajaTrasera button{
+    padding: 10px 40px;
+    border: 2px solid #fff;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    transition: all 300ms;
+}
+
+.cajaTrasera button:hover{
+    background: #fff;
+    color: #7fcc7c;
+}
+
+/*Formularios*/
+
+.contenedorLoginRegistrer{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 380px;
+    position: relative;
+    top: -185px;
+    left: 10px;
+
+    transition: left 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+
+.contenedorLoginRegistrer form{
+    width: 100%;
+    padding: 80px 20px;
+    background: #fff;
+    position: absolute;
+    border-radius: 20px;
+}
+
+.contenedorLoginRegistrer form h2{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #7fcc7c;
+}
+
+.contenedorLoginRegistrer form input{
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background: #f2f2f2;
+    font-size: 16px;
+    outline: none;
+}
+
+.contenedorLoginRegistrer form button{
+    padding: 10px 40px;
+    margin-top: 40px;
+    border: none;
+    font-size: 14px;
+    background: #7fcc7c;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+.formularioLogin{
+    opacity: 1;
+    display: block;
+}
+
+.formularioregistrer{
+    display: none;
+}
+/*Aqui empieza el footer*/
+.redes-container{
+    display: flex;
+    height: 150PX;
+    align-items: center;
+    justify-content: center;
+}
+.redes-container ul li{
+    display: inline-block;
+    margin: 0 5px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+.redes-container ul li a{
+    display: block;
+    padding: 0px 10px;
+    background: #333;
+    color: #fff;
+    line-height: 50px;
+    font-size: 18px;
+    box-shadow: 0 3px 5px 0px rgba( 0, 0, 0, .2);
+    transition: .2s;
+}
+.redes-container ul:hover a{
+    filter: blur(2px);
+}
+.redes-container ul li a:hover{
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, .4);
+    filter: none;
+}
+.redes-container ul li .facebook:hover{
+    background: var(--facebook);
+}
+.redes-container ul li .instagram:hover{
+    background: var(--instagram);
+}
+.redes-container ul li .twitter:hover{
+    background: var(--twitter);
+}
+.redes-container ul li .gmail:hover{
+    background: var(--gmail);
+}
+.redes-container ul li .telefono:hover{
+    background: var(--mobile);
+}
+/*Trabajando en el responsive Desing*/
+
+@media screen and (max-width:850px){
+    main{
+        margin-top: 50px;
+    }
+    .cajaTrasera{
+        max-width: 350px;
+        height: 300px;
+        flex-direction: column;
+        margin: auto;
+    }
+    .cajaTrasera div{
+        margin: 0px;
+        position: absolute;
+    }
+
+    /*Formulario*/
+
+    .contenedorLoginRegistrer{
+        top: -10px;
+        left: -5px;
+        margin: auto;
+    }
+
+    .contenedorLoginRegistrer form{
+        position: relative;
+    }
+}

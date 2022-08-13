@@ -1,0 +1,40 @@
+
+CREATE DATABASE design;
+
+CREATE TABLE design.rol (
+	ID int PRIMARY KEY AUTO_INCREMENT,
+	rol varchar(30)
+);
+
+CREATE TABLE design.usuario(
+	ID int PRIMARY KEY AUTO_INCREMENT,
+	ID_rol int,
+	nombre varchar(30),
+	apellidos varchar(50),
+	cedula varchar(15),
+	telefono varchar(30),
+	direcion varchar(50),
+	contraseña varchar(50),
+FOREIGN KEY (ID_rol) REFERENCES usuario(ID)
+);
+
+CREATE TABLE design.cita(
+    ID int PRIMARY KEY AUTO_INCREMENT,
+    ID_usuario int,
+    hora time,
+    fecha date,
+FOREIGN KEY (ID_usuario) REFERENCES usuario(ID) ON DELETE CASCADE on UPDATE CASCADE
+);
+
+CREATE TABLE design.contactenos(
+	ID int PRIMARY KEY AUTO_INCREMENT,
+	correo varchar(50),
+	descripcion varchar(200)
+);
+INSERT INTO rol (rol) VALUES ('administrador'), ('cliente');
+
+INSERT INTO `usuario` (`ID`, `ID_rol`, `nombre`, `apellidos`, `cedula`,`telefono`, `dirrecion`, `correo`, `contraseña`) VALUES (NULL, '1', 'mauricio', 'larrea', '1027801274','12345678', 'robledo', 'mauricio@gmail.com', 'qwe');
+
+INSERT INTO `usuario` (`ID`, `ID_rol`, `nombre`, `apellidos`, `cedula`, `dirrecion`, `correo`, `contraseña`) VALUES (NULL, '2', 'jose', 'perez', '1234567890','12345678', 'robledo', 'jose@gmail.com', 'zxc');
+
+INSERT into cita (ID_usuario,hora,fecha) VALUES (1,12:30,2021-10-2) , (2,7:30,2021-11-1);

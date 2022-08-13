@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.form-data {
+  width: 400px;
+  background: rgb(134, 128, 212);
+  padding: 30px;
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 4px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: white;
+  box-shadow: 7px 13px 37px #000;
+}
+.controls {
+  width: 100%;
+  background: rgb(248, 185, 174);
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  border: 2px solid rgba(8, 8, 241, 0.795);
+  font-size: 15px;
+  color: white;
+}
+.buttons {
+  width: 100%;
+  background: rgba(8, 8, 241, 0.795);
+  border: none;
+  padding: 5px;
+  color: white;
+  margin: 5px 0;
+  font-size: 20px;
+}
+label {
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 20px;
+}
